@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   // để deploy lên github page cần thêm
-  base: "/taikool-test",
+  base: "/taikool-test/",
 
   // add thêm dòng này mới đọc đc file 3D .glb
   assetsInclude: ['**/*.glb'],
