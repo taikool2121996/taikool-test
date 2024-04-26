@@ -59,7 +59,7 @@ const Navbar = () => {
       </NavLink>
       <nav className='flex text-lg gap-7 font-medium'>
         <NavLink to='/contact' className={({ isActive }) => isActive ? "text-blue-600" : "text-black" }>
-          Contact
+          Contact nee
         </NavLink>
       </nav>
     </header>

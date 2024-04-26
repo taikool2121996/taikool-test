@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  frontend:
+    # uncomment the following line if you want to run a local instance of MongoDB (Nếu muốn dùng MongoDB thì bỏ cmt 2 câu lệnh dưới)
+    # depends_on:
+    #   - db
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # do port mapping so that we can access the app from the browser
+    ports:
+      - 5173:5173
+
+    # use docker compose to watch for changes and rebuild the container
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: .
+          target: /app
+          action: sync
+
+volumes:
+  tasked:
