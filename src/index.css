@@ -23,7 +23,7 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-250px)];
   }
 
   .head-text {
@@ -47,7 +47,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .header {
-    @apply flex justify-between items-center top-0 bg-transparent ssm:px-0 sm:px-4 px-8 sm:py-0 py-4;
+    @apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto top-0 bg-transparent right-0 left-0;
   }
 
   .footer {
@@ -60,5 +60,16 @@ body:has(.card[data-color="green"]:hover) {
 
   .info-box {
     @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+  }
+
+  .logo {
+    border-radius: 8.889px;
+    background: #fff;
+    box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+      0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
+  }
+
+  .banner {
+    @apply w-full justify-center items-center
   }
 }
