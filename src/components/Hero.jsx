@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Logo } from '../models';
 
-const Navbar = () => {
+const Hero = () => {
   const adjustLogoForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -21,7 +21,7 @@ const Navbar = () => {
       screenPosition = [-3, -2.5, 0.5];
     } else {
       screenScale = [3, 3, 3];
-      screenPosition = [-3, -2.5, 0.5];
+      screenPosition = [-1, -2.5, 0.5];
     }
 
     return [screenScale, screenPosition];
@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <NavLink to="/">
-        <section>
+        <section className="max-w-40">
           <Canvas camera={{ near: 0.1, far: 100 }}>
             <Suspense>
               <directionalLight position={[1, 1, 1]} intensity={2} />
@@ -59,11 +59,11 @@ const Navbar = () => {
       </NavLink>
       <nav className='flex text-lg gap-7 font-medium'>
         <NavLink to='/contact' className={({ isActive }) => isActive ? "text-blue-600" : "text-black" }>
-          Contact nee
+          Contact me
         </NavLink>
       </nav>
     </header>
   );
 };
 
-export default Navbar;
+export default Hero;

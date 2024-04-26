@@ -1,17 +1,18 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import { Footer, Navbar } from './components';
+import { Footer, Hero } from './components';
 import { Home, Contact } from './pages';
 
 const App = () => {
   return (
-    <main className="bg-slate-300/20">
+    <main>
       <Router>
-        <Navbar />
+        <Hero />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     </main>
   );
